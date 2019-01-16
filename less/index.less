@@ -84,7 +84,7 @@ h1, h2, h3 {
 
 	text-transform: uppercase;
 	line-height: 1.8;
-	margin: 1rem 0;
+	margin: 1.5rem 0;
 	letter-spacing: 0.2rem;
 }
 h1 {
@@ -108,6 +108,15 @@ li:before {
 // MVP - nest all non-element selectors under container
 .wrapper {
 	padding: 1rem 1.5rem;
+
+	header {
+		h1 {
+			margin-bottom: 0;
+		}
+		.header-contact {
+			font-size: 90%;
+		}
+	}
 	
 	nav a {
 		text-decoration: none;
@@ -154,5 +163,29 @@ li:before {
 	.qualifications li {
 		font-size: 90%;
 	}
-	
+	.gig {
+		display: flex;
+		flex-flow: wrap;
+		margin-bottom: 3rem;
+		justify-content: space-between;
+		.name {
+			font-weight: bold;
+			order: 1;
+			flex-basis: 100%;
+			flex-grow: 1;
+		}
+		.locale, .dates {
+			font-size: 90%;
+			font-style: italic;
+			order: 2;
+		}
+		.description {
+			order: 4;
+			margin-top: 1rem;
+		}
+		.dates {
+			order: 3;
+			// justify-self: flex-end;
+		}
+	}
 }
