@@ -85,42 +85,74 @@ h1, h2, h3 {
 	text-transform: uppercase;
 	line-height: 1.8;
 	margin: 1rem 0;
+	letter-spacing: 0.2rem;
 }
 h1 {
 	font-size: 2.5rem;
 }
 
 h2 {
-
+	font-size: 1.6rem;
 }
-
-nav a {
-	text-decoration: none;
-	color: inherit;
-	display: block;
+ul {
+	list-style: disc;
 }
-nav a:hover {
-	text-decoration: underline;
+li {
+	margin: 0 0 0.5rem 3rem;
 }
-
-nav ul {
-	display: flex;
-	justify-content: flex-end;	
-}
-nav	li {
-	padding: 5px 8px;
+li:before {
+	// content: "– ";
+	// text-indent: -20px;
 }
 
 // MVP - nest all non-element selectors under container
 .wrapper {
 	padding: 1rem 1.5rem;
+	
+	nav a {
+		text-decoration: none;
+		color: inherit;
+		display: block;
+	}
+	nav a:hover {
+		text-decoration: underline;
+	}
+	
+	nav ul {
+		display: flex;
+		justify-content: flex-end;
+		list-style: none;
+	}
+	nav	li {
+		padding: 5px 8px;
+		margin: 0;
+	}
 
-}
-
-.spoon {
-
-}
-.spoon img {
-	// width: 400px;
-	max-width: 100%;
+	.spoon {
+		margin: 2rem 0 2.7rem;
+		transform: rotate(180deg);
+	}
+	.spoon img {
+		// width: 400px;
+		max-width: 100%;
+		filter: sepia(40%);
+	}
+	section {
+		margin-bottom: 3rem;
+	}
+	.intro h2 {
+		// display: flex;
+		// justify-content: space-between;
+		line-height: 1.2;
+		font-size: 3rem;
+		.avail {
+			font-size: 1.5rem;
+			display: block;
+			text-transform: capitalize;
+		}
+	}
+	.qualifications li {
+		font-size: 90%;
+	}
+	
 }
