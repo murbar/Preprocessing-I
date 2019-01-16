@@ -54,6 +54,53 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 62.5%;
 }
 
+
+
+// my styles
+
+// MVP - incorporate variables for colors and font stacks
+@body-font: 'Lato', sans-serif;
+// @heading-font: 'PT Serif', serif;
+@heading-font: 'Fredericka the Great', cursive;
+
+body {
+	background: #fbf7f5;
+	color: #5A371E;
+	font-size: 1.6rem;
+	font-family: @body-font;
+	line-height: 1.6;
+}
+
+h1, h2, h3 {
+	// font-family: @heading-font;
+	font-weight: bold;
+	// font-style: italic;
+	font-family: 'PT Serif', serif;
+	font-family: 'Abril Fatface', cursive;
+	font-family: 'Righteous', cursive; 
+	font-family: 'Cantarell', sans-serif;
+	// font-family: 'Fredericka the Great', cursive;
+	text-transform: uppercase;
+	line-height: 1.8;
+}
+h1 {
+	font-size: 2rem;
+}
+
+// MVP - nest all non-element selectors under container
+.wrapper {
+	padding: 1rem 1.5rem;
+
+}
+
+.spoon {
+
+}
+.spoon img {
+	// width: 400px;
+	max-width: 100%;
+}
