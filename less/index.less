@@ -64,9 +64,18 @@ html, body {
 
 // MVP - incorporate variables for colors and font stacks
 @body-font: 'Lato', sans-serif;
-// @heading-font: 'PT Serif', serif;
-@heading-font: 'Fredericka the Great', cursive;
+@heading-font: 'PT Serif', serif;
 @body-text-color: #5A371E;
+
+// MVP - incorporate at least 2 mixins
+.heading-styles() {
+	font-family: @heading-font;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1.8;
+	margin: 1.5rem 0;
+	letter-spacing: 0.2rem;
+}
 
 body {
 	background: #fbf7f5;
@@ -76,25 +85,16 @@ body {
 	line-height: 1.6;
 }
 
-h1, h2, h3 {
-	// font-family: @heading-font;
-	font-weight: bold;
-	// font-style: italic;
-	font-family: 'PT Serif', serif;
-	// font-family: 'Cantarell', sans-serif;
-
-	text-transform: uppercase;
-	line-height: 1.8;
-	margin: 1.5rem 0;
-	letter-spacing: 0.2rem;
-}
 h1 {
 	font-size: 2.5rem;
+	.heading-styles()
 }
 
 h2 {
 	font-size: 1.6rem;
+	.heading-styles()
 }
+
 ul {
 	list-style: disc;
 }
