@@ -54,6 +54,214 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 62.5%;
 }
 
+
+
+// my styles
+
+// MVP - incorporate variables for colors and font stacks
+@body-font: 'Lato', sans-serif;
+@heading-font: 'PT Serif', serif;
+@body-text-color: #5A371E;
+
+// MVP - incorporate at least 2 mixins
+.heading-styles() {
+	font-family: @heading-font;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1.8;
+	margin: 1.5rem 0;
+	letter-spacing: 0.2rem;
+}
+.input-style() {
+	width: 100%;
+	margin: 1rem 0;
+	padding: 1rem;
+	font-size: 1em;
+	border: 1px solid @body-text-color;
+	border-radius: 0.5rem;
+}
+
+body {
+	background: #fbf7f5;
+	color: @body-text-color;
+	font-size: 1.6rem;
+	font-family: @body-font;
+	line-height: 1.6;
+}
+
+h1 {
+	font-size: 2.5rem;
+	.heading-styles()
+}
+
+h2 {
+	font-size: 1.6rem;
+	.heading-styles()
+}
+
+ul {
+	list-style: disc;
+}
+li {
+	margin: 0 0 1rem 3rem;
+	line-height: 1.4;
+}
+
+// MVP - nest all non-element selectors under container
+.wrapper {
+	padding: 1rem 1.5rem 3rem;
+
+	header {
+		h1 {
+			margin-bottom: 0;
+		}
+		.header-contact {
+			font-size: 90%;
+		}
+	}
+	
+	nav a {
+		text-decoration: none;
+		color: inherit;
+		display: block;
+	}
+	nav a:hover {
+		text-decoration: underline;
+	}
+	
+	nav ul {
+		display: flex;
+		justify-content: flex-end;
+		list-style: none;
+	}
+	nav	li {
+		padding: 5px 8px;
+		margin: 0;
+	}
+
+	.spoon {
+		margin: 2rem 0 2.7rem;	
+	}
+	.spoon img {
+		width: 100%;
+		max-width: 400px;
+		filter: sepia(40%);
+		transform: rotate(180deg);
+	}
+	section {
+		margin-bottom: 3rem;
+	}
+	.intro h2 {
+		// display: flex;
+		// justify-content: space-between;
+		line-height: 1.2;
+		font-size: 3rem;
+		.avail {
+			font-size: 1.5rem;
+			display: block;
+			text-transform: capitalize;
+		}
+	}
+	.qualifications li {
+		font-size: 90%;
+	}
+	.gig {
+		display: flex;
+		flex-flow: wrap;
+		margin-bottom: 3rem;
+		justify-content: space-between;
+		.name {
+			font-weight: bold;
+			order: 1;
+			flex-basis: 100%;
+			flex-grow: 1;
+		}
+		.locale, .dates {
+			font-size: 90%;
+			font-style: italic;
+			order: 2;
+		}
+		.description {
+			order: 4;
+			margin-top: 1rem;
+		}
+		.dates {
+			order: 3;
+			// justify-self: flex-end;
+		}
+	}
+	.contact-form {
+		label {
+			display: block;
+
+		}
+		input {
+			.input-style()
+		}
+		textarea {
+			.input-style()
+		}
+		button {
+			.input-style()
+		}
+		button {
+			background: @body-text-color;
+			color: white;
+		}
+	}
+	
+}
+
+@media (min-width: 400px) {
+	.wrapper {
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 800px) {
+	.wrapper {
+		font-size: 2rem;
+	}
+}
+
+
+
+@media (min-width: 1000px) {
+	.wrapper {
+		width: 70%;
+		// padding-left: 200px;
+		max-width: 800px;
+		.intro {
+			margin-top: 3rem;
+		}
+		.spoon {
+			img {
+				transform: rotate(90deg);
+			}
+			position: absolute;
+			top: 300px;
+			left: calc(55% - 660px);
+		}
+	}
+}
+@media (min-width: 1050px) {
+	.wrapper {
+
+		.spoon {
+			left: calc(53% - 660px);
+		}
+	}
+}
+@media (min-width: 1100px) {
+	.wrapper {
+
+		.spoon {
+			left: calc(50% - 660px);
+		}
+	}
+}
