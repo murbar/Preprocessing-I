@@ -133,4 +133,167 @@ table {
 html,
 body {
   height: 100%;
+  font-size: 62.5%;
+}
+body {
+  background: #fbf7f5;
+  color: #5A371E;
+  font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+}
+h1 {
+  font-size: 2.5rem;
+  font-family: 'PT Serif', serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.8;
+  margin: 1.5rem 0;
+  letter-spacing: 0.2rem;
+}
+h2 {
+  font-size: 1.6rem;
+  font-family: 'PT Serif', serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.8;
+  margin: 1.5rem 0;
+  letter-spacing: 0.2rem;
+}
+ul {
+  list-style: disc;
+}
+li {
+  margin: 0 0 1rem 3rem;
+  line-height: 1.4;
+}
+.wrapper {
+  padding: 1rem 1.5rem 3rem;
+}
+.wrapper header h1 {
+  margin-bottom: 0;
+}
+.wrapper header .header-contact {
+  font-size: 90%;
+}
+.wrapper nav a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.wrapper nav a:hover {
+  text-decoration: underline;
+}
+.wrapper nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+.wrapper nav li {
+  padding: 5px 8px;
+  margin: 0;
+}
+.wrapper .spoon {
+  margin: 2rem 0 2.7rem;
+}
+.wrapper .spoon img {
+  width: 100%;
+  max-width: 400px;
+  filter: sepia(40%);
+  transform: rotate(180deg);
+}
+.wrapper section {
+  margin-bottom: 3rem;
+}
+.wrapper .intro h2 {
+  line-height: 1.2;
+  font-size: 3rem;
+}
+.wrapper .intro h2 .avail {
+  font-size: 1.5rem;
+  display: block;
+  text-transform: capitalize;
+}
+.wrapper .qualifications li {
+  font-size: 90%;
+}
+.wrapper .gig {
+  display: flex;
+  flex-flow: wrap;
+  margin-bottom: 3rem;
+  justify-content: space-between;
+}
+.wrapper .gig .name {
+  font-weight: bold;
+  order: 1;
+  flex-basis: 100%;
+  flex-grow: 1;
+}
+.wrapper .gig .locale,
+.wrapper .gig .dates {
+  font-size: 90%;
+  font-style: italic;
+  order: 2;
+}
+.wrapper .gig .description {
+  order: 4;
+  margin-top: 1rem;
+}
+.wrapper .gig .dates {
+  order: 3;
+}
+.wrapper .contact-form label {
+  display: block;
+}
+.wrapper .contact-form input,
+.wrapper .contact-form textarea,
+.wrapper .contact-form button {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1rem;
+  font-size: 1em;
+  border: 1px solid #5A371E;
+  border-radius: 0.5rem;
+}
+.wrapper .contact-form button {
+  background: #5A371E;
+  color: white;
+}
+@media (min-width: 400px) {
+  .wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 800px) {
+  .wrapper {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1000px) {
+  .wrapper {
+    width: 70%;
+    max-width: 800px;
+  }
+  .wrapper .intro {
+    margin-top: 3rem;
+  }
+  .wrapper .spoon {
+    position: absolute;
+    top: 300px;
+    left: calc(55% - 660px);
+  }
+  .wrapper .spoon img {
+    transform: rotate(90deg);
+  }
+}
+@media (min-width: 1050px) {
+  .wrapper .spoon {
+    left: calc(53% - 660px);
+  }
+}
+@media (min-width: 1100px) {
+  .wrapper .spoon {
+    left: calc(50% - 660px);
+  }
 }
