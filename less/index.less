@@ -76,6 +76,14 @@ html, body {
 	margin: 1.5rem 0;
 	letter-spacing: 0.2rem;
 }
+.input-style() {
+	width: 100%;
+	margin: 1rem 0;
+	padding: 1rem;
+	font-size: 1em;
+	border: 1px solid @body-text-color;
+	border-radius: 0.5rem;
+}
 
 body {
 	background: #fbf7f5;
@@ -191,13 +199,14 @@ li {
 			display: block;
 
 		}
-		input, textarea, button {
-			width: 100%;
-			margin: 1rem 0;
-			padding: 1rem;
-			font-size: 1em;
-			border: 1px solid @body-text-color;
-			border-radius: 0.5rem;
+		input {
+			.input-style()
+		}
+		textarea {
+			.input-style()
+		}
+		button {
+			.input-style()
 		}
 		button {
 			background: @body-text-color;

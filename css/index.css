@@ -245,8 +245,22 @@ li {
 .wrapper .contact-form label {
   display: block;
 }
-.wrapper .contact-form input,
-.wrapper .contact-form textarea,
+.wrapper .contact-form input {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1rem;
+  font-size: 1em;
+  border: 1px solid #5A371E;
+  border-radius: 0.5rem;
+}
+.wrapper .contact-form textarea {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1rem;
+  font-size: 1em;
+  border: 1px solid #5A371E;
+  border-radius: 0.5rem;
+}
 .wrapper .contact-form button {
   width: 100%;
   margin: 1rem 0;
